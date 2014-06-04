@@ -1,6 +1,6 @@
 library(datasets)
 zipFileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
-if (file.exists("powerconsumption.zip")) {
+if (!file.exists("powerconsumption.zip")) {
 	download.file(zipFileUrl, destfile="powercomsumption.zip", method="curl")
 	unzip("powercomsumption.zip")
 }
